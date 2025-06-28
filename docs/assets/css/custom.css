@@ -1,41 +1,13 @@
-# @media (prefers-color-scheme: dark) {
-#  body { background:#111; color:#eee; }
-#  a { color:#9cf; }
-#}
-
-/* Sadece koyu modda uygulansın */
 @media (prefers-color-scheme: dark) {
+  body { background:#111; color:#eee; }
+  a { color:#9cf; }
+}
 
-  /* --------- Genel gövde --------- */
-  .body {
-    background:#111 !important;     /* siyah zemini sabitle */
-    color:#e0e0e0;                  /* açık gri yazı */
-  }
+/* Yalnızca koyu-modda, sadece renk ayarla – padding/border yok */
+@media (prefers-color-scheme: dark) {
+  .markdown-body { background:#111 !important; color:#e0e0e0; }
 
-  /* --------- Bağlantılar --------- */
-  .markdown-body a {
-    color:#4ea3ff;                  /* canlı mavi */
-  }
-
-  /* --------- Inline kod & .label --------- */
+  /* inline code ve .label kutuları gri olsun, başka dokunma */
   .markdown-body code,
-  .markdown-body .label {
-    background:#2a2a2a;
-    color:#f7f7f7;
-    border:1px solid #444;
-    border-radius:4px;
-    padding:2px 4px;
-  }
-
-  /* --------- Blok kod --------- */
-  .markdown-body pre {
-    background:#151515;
-    border:1px solid #333;
-    padding:12px;
-    overflow:auto;
-  }
-  .markdown-body pre code {
-    background:transparent;         /* pre zeminini kullan */
-    color:#e6e6e6;
-  }
+  .markdown-body .label { background:#2a2a2a; color:#f0f0f0; }
 }
