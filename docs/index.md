@@ -1,171 +1,116 @@
-## İçindekiler
+<link rel="stylesheet" href="assets/css/custom.css">
 
-1. [Dosya Sistemi Gezintisi](#dosya-sistemi-gezintisi)
-2. [Dosya ve Dizin İşlemleri](#dosya-ve-dizin-işlemleri)
-3. [Dosya İçeriği Görüntüleme](#dosya-içeriği-görüntüleme)
-4. [Disk Kullanımı & FS Bilgisi](#disk-kullanımı--fs-bilgisi)
-5. [Disk Bölümlendirme & Oluşturma](#disk-bölümlendirme--oluşturma)
-6. [LVM Yönetimi](#lvm-yönetimi)
-7. [Disk Onarım](#disk-onarım)
-8. [Swap Yönetimi](#swap-yönetimi)
-9. [Dosya İzinleri & Sahiplik](#dosya-izinleri--sahiplik)
-10. [Dosya Arama & Metin İşleme](#dosya-arama--metin-işleme)
-11. [Paket Yönetimi](#paket-yönetimi)
-12. [Sistem Bilgisi & Donanım](#sistem-bilgisi--donanım)
-13. [Proses Yönetimi](#proses-yönetimi)
-14. [Servis & Sistem Yönetimi](#servis--sistem-yönetimi)
-15. [Log Yönetimi & Analizi](#log-yönetimi--analizi)
-16. [Zamanlanmış Görevler](#zamanlanmış-görevler)
-17. [Kullanıcı & Grup Yönetimi](#kullanıcı--grup-yönetimi)
-18. [Ağ Araçları](#ağ-araçları)
-19. [Ağ Yapılandırma & DNS](#ağ-yapılandırma--dns)
-20. [Güvenlik Duvarı & Güvenlik](#güvenlik-duvarı--güvenlik)
-21. [SSH & Uzak Erişim](#ssh--uzak-erişim)
-22. [Arşivleme & Sıkıştırma](#arşivleme--sıkıştırma)
-23. [Yedekleme & Senkronizasyon](#yedekleme--senkronizasyon)
-24. [Şifreleme & Kriptografi](#şifreleme--kriptografi)
-25. [Modül & Donanım Yönetimi](#modül--donanım-yönetimi)
-26. [Açık Dosyalar & Bağlantılar](#açık-dosyalar--bağlantılar)
-27. [Performans İzleme](#performans-izleme)
-28. [Zaman & Tarih](#zaman--tarih)
-29. [Yerel Ayarlar](#yerel-ayarlar)
-30. [Kabuk & Çevre](#kabuk--çevre)
-31. [Kabuk Betikleri](#kabuk-betikleri)
-32. [Oturum & Terminal Çoklayıcılar](#oturum--terminal-çoklayıcılar)
-33. [Bluetooth & Kablosuz Ağlar](#bluetooth--kablosuz-ağlar)
+### Dosya Sistemi Gezintisi  
+[`pwd`](commands/pwd.md), [`cd`](commands/cd.md), [`ls`](commands/ls.md), [`tree`](commands/tree.md)
 
----
+### Dosya ve Dizin İşlemleri  
+[`cp`](commands/cp.md), [`mv`](commands/mv.md), [`rm`](commands/rm.md), [`mkdir`](commands/mkdir.md), [`rmdir`](commands/rmdir.md),  
+[`touch`](commands/touch.md), [`ln`](commands/ln.md), [`ln -s`](commands/ln-s.md), [`stat`](commands/stat.md), [`file`](commands/file.md)
 
-### Dosya Sistemi Gezintisi
+### Dosya İçeriği Görüntüleme  
+[`cat`](commands/cat.md), [`less`](commands/less.md), [`head`](commands/head.md), [`tail`](commands/tail.md), [`nl`](commands/nl.md), [`tac`](commands/tac.md)
 
-`pwd`, `cd`, `ls`, `tree`
+### Disk Kullanımı & FS Bilgisi  
+[`df`](commands/df.md), [`du`](commands/du.md), [`lsblk`](commands/lsblk.md), [`blkid`](commands/blkid.md), [`mount`](commands/mount.md), [`umount`](commands/umount.md)
 
-### Dosya ve Dizin İşlemleri
+### Disk Bölümlendirme & Oluşturma  
+[`fdisk`](commands/fdisk.md), [`parted`](commands/parted.md), [`mkfs`](commands/mkfs.md)
 
-`cp`, `mv`, `rm`, `mkdir`, `rmdir`, `touch`, `ln`, `ln -s`, `stat`, `file`
+### LVM Yönetimi  
+[`pvcreate`](commands/pvcreate.md), [`pvdisplay`](commands/pvdisplay.md), [`pvs`](commands/pvs.md), [`pvmove`](commands/pvmove.md), [`pvremove`](commands/pvremove.md),  
+[`vgcreate`](commands/vgcreate.md), [`vgdisplay`](commands/vgdisplay.md), [`vgs`](commands/vgs.md), [`vgextend`](commands/vgextend.md), [`vgremove`](commands/vgremove.md),  
+[`lvcreate`](commands/lvcreate.md), [`lvdisplay`](commands/lvdisplay.md), [`lvs`](commands/lvs.md), [`lvextend`](commands/lvextend.md),  
+[`lvreduce`](commands/lvreduce.md), [`lvremove`](commands/lvremove.md), [`xfs_growfs`](commands/xfs_growfs.md)
 
-### Dosya İçeriği Görüntüleme
+### Disk Onarım  
+[`fsck`](commands/fsck.md), [`xfs_repair`](commands/xfs_repair.md)
 
-`cat`, `less`, `head`, `tail`, `nl`, `tac`
+### Swap Yönetimi  
+[`mkswap`](commands/mkswap.md), [`swapon`](commands/swapon.md), [`swapoff`](commands/swapoff.md)
 
-### Disk Kullanımı & FS Bilgisi
+### Dosya İzinleri & Sahiplik  
+[`chmod`](commands/chmod.md), [`chown`](commands/chown.md), [`chgrp`](commands/chgrp.md), [`umask`](commands/umask.md)
 
-`df`, `du`, `lsblk`, `blkid`, `mount`, `umount`
+### Dosya Arama & Metin İşleme  
+[`grep`](commands/grep.md), [`awk`](commands/awk.md), [`sed`](commands/sed.md), [`cut`](commands/cut.md), [`sort`](commands/sort.md),  
+[`uniq`](commands/uniq.md), [`tr`](commands/tr.md), [`wc`](commands/wc.md), [`find`](commands/find.md), [`locate`](commands/locate.md), [`updatedb`](commands/updatedb.md)
 
-### Disk Bölümlendirme & Oluşturma
+### Paket Yönetimi  
+[`apt`](commands/apt.md), [`apt-get`](commands/apt-get.md), [`dpkg`](commands/dpkg.md), [`snap`](commands/snap.md)
 
-`fdisk`, `parted`, `mkfs`
+### Sistem Bilgisi & Donanım  
+[`uname`](commands/uname.md), [`lscpu`](commands/lscpu.md), [`lshw`](commands/lshw.md), [`lsusb`](commands/lsusb.md), [`lspci`](commands/lspci.md),  
+[`uptime`](commands/uptime.md), [`free`](commands/free.md), [`vmstat`](commands/vmstat.md), [`dmesg`](commands/dmesg.md),  
+[`dmidecode`](commands/dmidecode.md), [`hostnamectl`](commands/hostnamectl.md), [`timedatectl`](commands/timedatectl.md)
 
-### LVM Yönetimi
+### Proses Yönetimi  
+[`ps`](commands/ps.md), [`top`](commands/top.md), [`htop`](commands/htop.md), [`jobs`](commands/jobs.md), [`bg`](commands/bg.md),  
+[`fg`](commands/fg.md), [`kill`](commands/kill.md), [`pkill`](commands/pkill.md), [`nice`](commands/nice.md),  
+[`renice`](commands/renice.md), [`nohup`](commands/nohup.md), [`pidstat`](commands/pidstat.md)
 
-`pvcreate`, `pvdisplay`, `pvs`, `pvmove`, `pvremove`, `vgcreate`, `vgdisplay`, `vgs`, `vgextend`, `vgremove`,
-`lvcreate`, `lvdisplay`, `lvs`, `lvextend`, `lvreduce`, `lvremove`, `xfs_growfs`
+### Servis & Sistem Yönetimi  
+[`systemctl`](commands/systemctl.md), [`service`](commands/service.md), [`poweroff`](commands/poweroff.md), [`reboot`](commands/reboot.md), [`init`](commands/init.md)
 
-### Disk Onarım
+### Log Yönetimi & Analizi  
+[`journalctl`](commands/journalctl.md), [`logger`](commands/logger.md), [`logrotate`](commands/logrotate.md), [`tail`](commands/tail.md)
 
-`fsck`, `xfs_repair`
+### Zamanlanmış Görevler  
+[`cron`](commands/cron.md), [`crontab`](commands/crontab.md), [`systemctl (timer)`](commands/systemctl-timer.md)
 
-### Swap Yönetimi
+### Kullanıcı & Grup Yönetimi  
+[`adduser`](commands/adduser.md), [`addgroup`](commands/addgroup.md), [`deluser`](commands/deluser.md),  
+[`delgroup`](commands/delgroup.md), [`usermod`](commands/usermod.md), [`groupmod`](commands/groupmod.md),  
+[`passwd`](commands/passwd.md), [`sudo`](commands/sudo.md)
 
-`mkswap`, `swapon`, `swapoff`
+### Ağ Araçları  
+[`ip`](commands/ip.md), [`ping`](commands/ping.md), [`ss`](commands/ss.md), [`nc`](commands/nc.md),  
+[`traceroute`](commands/traceroute.md), [`curl`](commands/curl.md), [`wget`](commands/wget.md),  
+[`dig`](commands/dig.md), [`nslookup`](commands/nslookup.md)
 
-### Dosya İzinleri & Sahiplik
+### Ağ Yapılandırma & DNS  
+[`netplan`](commands/netplan.md), [`resolvectl`](commands/resolvectl.md)
 
-`chmod`, `chown`, `chgrp`, `umask`
+### Güvenlik Duvarı & Güvenlik  
+[`ufw`](commands/ufw.md), [`iptables`](commands/iptables.md), [`fail2ban`](commands/fail2ban.md)
 
-### Dosya Arama & Metin İşleme
+### SSH & Uzak Erişim  
+[`ssh`](commands/ssh.md), [`scp`](commands/scp.md), [`ssh-keygen`](commands/ssh-keygen.md), [`ssh-copy-id`](commands/ssh-copy-id.md)
 
-`grep`, `awk`, `sed`, `cut`, `sort`, `uniq`, `tr`, `wc`, `find`, `locate`, `updatedb`
+### Arşivleme & Sıkıştırma  
+[`tar`](commands/tar.md), [`gzip`](commands/gzip.md), [`gunzip`](commands/gunzip.md), [`bzip2`](commands/bzip2.md),  
+[`bunzip2`](commands/bunzip2.md), [`zip`](commands/zip.md), [`unzip`](commands/unzip.md), [`xz`](commands/xz.md), [`unxz`](commands/unxz.md)
 
-### Paket Yönetimi
+### Yedekleme & Senkronizasyon  
+[`rsync`](commands/rsync.md)
 
-`apt`, `apt-get`, `dpkg`, `snap`
+### Şifreleme & Kriptografi  
+[`openssl`](commands/openssl.md), [`gpg`](commands/gpg.md), [`cryptsetup`](commands/cryptsetup.md)
 
-### Sistem Bilgisi & Donanım
+### Modül & Donanım Yönetimi  
+[`lsmod`](commands/lsmod.md), [`modprobe`](commands/modprobe.md)
 
-`uname`, `lscpu`, `lshw`, `lsusb`, `lspci`, `uptime`, `free`, `vmstat`, `dmesg`,
-`dmidecode`, `hostnamectl`, `timedatectl`
+### Açık Dosyalar & Bağlantılar  
+[`lsof`](commands/lsof.md), [`fuser`](commands/fuser.md)
 
-### Proses Yönetimi
+### Performans İzleme  
+[`vmstat`](commands/vmstat.md), [`iostat`](commands/iostat.md), [`iotop`](commands/iotop.md),  
+[`iftop`](commands/iftop.md), [`sar`](commands/sar.md), [`perf`](commands/perf.md)
 
-`ps`, `top`, `htop`, `jobs`, `bg`, `fg`, `kill`, `pkill`, `nice`, `renice`, `nohup`, `pidstat`
+### Zaman & Tarih  
+[`timedatectl`](commands/timedatectl.md), [`hwclock`](commands/hwclock.md), [`date`](commands/date.md), [`cal`](commands/cal.md)
 
-### Servis & Sistem Yönetimi
+### Yerel Ayarlar  
+[`locale`](commands/locale.md), [`update-locale`](commands/update-locale.md)
 
-`systemctl`, `service`, `poweroff`, `reboot`, `init`
+### Kabuk & Çevre  
+[`bash`](commands/bash.md), [`env`](commands/env.md), [`export`](commands/export.md), [`alias`](commands/alias.md),  
+[`unalias`](commands/unalias.md), [`source`](commands/source.md), [`echo`](commands/echo.md), [`history`](commands/history.md)
 
-### Log Yönetimi & Analizi
+### Kabuk Betikleri  
+`#!`, [`chmod +x`](commands/chmod.md)
 
-`journalctl`, `logger`, `logrotate`, `tail`
+### Oturum & Terminal Çoklayıcılar  
+[`screen`](commands/screen.md), [`tmux`](commands/tmux.md)
 
-### Zamanlanmış Görevler
-
-`cron`, `crontab`, `systemctl (timer)`
-
-### Kullanıcı & Grup Yönetimi
-
-`adduser`, `addgroup`, `deluser`, `delgroup`, `usermod`, `groupmod`, `passwd`, `sudo`
-
-### Ağ Araçları
-
-`ip`, `ping`, `ss`, `nc`, `traceroute`, `curl`, `wget`, `dig`, `nslookup`
-
-### Ağ Yapılandırma & DNS
-
-`netplan`, `resolvectl`
-
-### Güvenlik Duvarı & Güvenlik
-
-`ufw`, `iptables`, `fail2ban`
-
-### SSH & Uzak Erişim
-
-`ssh`, `scp`, `ssh-keygen`, `ssh-copy-id`
-
-### Arşivleme & Sıkıştırma
-
-`tar`, `gzip`, `gunzip`, `bzip2`, `bunzip2`, `zip`, `unzip`, `xz`, `unxz`
-
-### Yedekleme & Senkronizasyon
-
-`rsync`
-
-### Şifreleme & Kriptografi
-
-`openssl`, `gpg`, `cryptsetup`
-
-### Modül & Donanım Yönetimi
-
-`lsmod`, `modprobe`
-
-### Açık Dosyalar & Bağlantılar
-
-`lsof`, `fuser`
-
-### Performans İzleme
-
-`vmstat`, `iostat`, `iotop`, `iftop`, `sar`, `perf`
-
-### Zaman & Tarih
-
-`timedatectl`, `hwclock`, `date`, `cal`
-
-### Yerel Ayarlar
-
-`locale`, `update-locale`
-
-### Kabuk & Çevre
-
-`bash`, `env`, `export`, `alias`, `unalias`, `source`, `echo`, `history`
-
-### Kabuk Betikleri
-
-`#!`, `chmod +x`
-
-### Oturum & Terminal Çoklayıcılar
-
-`screen`, `tmux`
-
-### Bluetooth & Kablosuz Ağlar
-
-`bluetoothctl`, `iw`, `rfkill`
+### Bluetooth & Kablosuz Ağlar  
+[`bluetoothctl`](commands/bluetoothctl.md), [`iw`](commands/iw.md), [`rfkill`](commands/rfkill.md)
