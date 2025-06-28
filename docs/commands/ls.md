@@ -1,3 +1,3 @@
-<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="/test/assets/css/custom.css">
 
 # ls.md dosyası
