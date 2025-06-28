@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="docs/assets/css/custom.css">
+<link rel="stylesheet" href="/docs/assets/css/custom.css">
 
 # 📚 Documentation Portal
 
