@@ -1,4 +1,26 @@
+/* Koyu modda etiket, inline-code ve kod bloklarına kontrast ver */
 @media (prefers-color-scheme: dark) {
-  body { background:#111; color:#eee; }
-  a { color:#9cf; }
+  /* GitHub'daki .label bileşeni  --------------------------- */
+  .markdown-body .label {
+    background:#333;      /* koyu ama gövdeden biraz açık */
+    color:#fff;           /* beyaz metin */
+    border:1px solid #555;
+  }
+
+  /* inline `code` ----------------------------------------- */
+  .markdown-body code {
+    background:#222;
+    color:#ffdf88;        /* soluk sarı */
+  }
+
+  /* ```code blokları``` ----------------------------------- */
+  .markdown-body pre code {
+    background:#111;      /* çevreleyen pre'yle aynı */
+    color:#e6e6e6;
+  }
+
+  .markdown-body pre {
+    background:#111;
+    border:1px solid #333;
+  }
 }
