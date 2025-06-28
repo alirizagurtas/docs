@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="/docs/assets/css/custom.css">
 
 ### Dosya Sistemi Gezintisi  
 [`pwd`](commands/pwd.md), [`cd`](commands/cd.md), [`ls`](commands/ls.md), [`tree`](commands/tree.md)
