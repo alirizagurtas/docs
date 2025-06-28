@@ -1,26 +1,36 @@
-/* Koyu modda etiket, inline-code ve kod bloklarına kontrast ver */
+/* Sadece koyu modda uygulansın */
 @media (prefers-color-scheme: dark) {
-  /* GitHub'daki .label bileşeni  --------------------------- */
+
+  /* --------- Genel gövde --------- */
+  .markdown-body {
+    background:#111 !important;     /* siyah zemini sabitle */
+    color:#e0e0e0;                  /* açık gri yazı */
+  }
+
+  /* --------- Bağlantılar --------- */
+  .markdown-body a {
+    color:#4ea3ff;                  /* canlı mavi */
+  }
+
+  /* --------- Inline kod & .label --------- */
+  .markdown-body code,
   .markdown-body .label {
-    background:#333;      /* koyu ama gövdeden biraz açık */
-    color:#fff;           /* beyaz metin */
-    border:1px solid #555;
+    background:#2a2a2a;
+    color:#f7f7f7;
+    border:1px solid #444;
+    border-radius:4px;
+    padding:2px 4px;
   }
 
-  /* inline `code` ----------------------------------------- */
-  .markdown-body code {
-    background:#222;
-    color:#ffdf88;        /* soluk sarı */
-  }
-
-  /* ```code blokları``` ----------------------------------- */
-  .markdown-body pre code {
-    background:#111;      /* çevreleyen pre'yle aynı */
-    color:#e6e6e6;
-  }
-
+  /* --------- Blok kod --------- */
   .markdown-body pre {
-    background:#111;
+    background:#151515;
     border:1px solid #333;
+    padding:12px;
+    overflow:auto;
+  }
+  .markdown-body pre code {
+    background:transparent;         /* pre zeminini kullan */
+    color:#e6e6e6;
   }
 }
