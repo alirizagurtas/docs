@@ -1,0 +1,4 @@
+@media (prefers-color-scheme: dark) {
+  body { background:#111; color:#eee; }
+  a { color:#9cf; }
+}
