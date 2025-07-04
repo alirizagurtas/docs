@@ -17,11 +17,20 @@ echo "Redis kurulumu başlıyor..."
 
 case "$1" in
   "ubuntu")
-    ACTIONS=(
-        "sudo apt update"
-        "sudo apt install -y redis-server"
-        "sudo systemctl enable redis-server"
-    )
+-    ACTIONS=( "sudo apt update" "sudo apt install -y redis-server" "sudo systemctl enable redis-server" )
++    if $DRY_RUN; then
++      ACTIONS=( \
++        "apt-get --simulate update" \
++        "apt-get --simulate install redis-server" \
++        "echo 'systemctl --dry-run enable redis-server'" \
++      )
++    else
++      ACTIONS=( \
++        "sudo apt update" \
++        "sudo apt install -y redis-server" \
++        "sudo systemctl enable redis-server" \
++      )
++    fi
     ;;
   "docker")
     ACTIONS=(
