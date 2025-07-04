@@ -2,6 +2,24 @@
 curl -sL https://install.example.com | bash
 ```
 
+```powershell
+Install-Module -Name MyApp
+```
+
+```Dockerfile
+FROM ubuntu:22.04
+COPY docs /app/docs
+RUN /app/docs/1-INSTALLATION/automated/install.sh
+```
+
+```yaml
+# .github/workflows/docs-check.yml
+- name: Validate install scripts
+  run: |
+    cd 1-INSTALLATION/automated/
+    ./test-all.sh
+```
+
 # fdisk — Ubuntu 24.04
 
 **Sürüm:** `fdisk --version` ⇒ util-linux 2.39.3  
